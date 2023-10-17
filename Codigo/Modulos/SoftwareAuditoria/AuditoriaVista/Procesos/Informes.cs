@@ -16,5 +16,23 @@ namespace AuditoriaVista.Procesos
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario Ayudainformes
+            AyudaInformes informes = new AyudaInformes();
+
+            // Mostrar Ayudainformes utilizando Show (no bloquea informes)
+            informes.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario Ayudainformes
+            AyudaInformes informes = new AyudaInformes();
+
+            // Mostrar Ayudainformes utilizando Show (no bloquea informes)
+            informes.Show();
+        }
     }
 }

@@ -31,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.Sharp">
+      <HintPath>..\..\..\Componentes\Navegador\Vista\bin\Debug\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="NavegadorVista">
+      <HintPath>..\..\..\Componentes\Navegador\Vista\bin\Debug\NavegadorVista.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -43,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mantenimientos\AyudaGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\AyudaGrupos.Designer.cs">
+      <DependentUpon>AyudaGrupos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\Empresas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +127,12 @@
     <Compile Include="Procesos\AsignacionGrupos.Designer.cs">
       <DependentUpon>AsignacionGrupos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\AyudaInformes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\AyudaInformes.Designer.cs">
+      <DependentUpon>AyudaInformes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\Informes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,8 +155,23 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <EmbeddedResource Include="Mantenimientos\AyudaGrupos.resx">
+      <DependentUpon>AyudaGrupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Empresas.resx">
+      <DependentUpon>Empresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Grupos.resx">
+      <DependentUpon>Grupos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDIAuditoria.resx">
       <DependentUpon>MDIAuditoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\AyudaInformes.resx">
+      <DependentUpon>AyudaInformes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Informes.resx">
+      <DependentUpon>Informes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
