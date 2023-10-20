@@ -164,6 +164,9 @@
     <EmbeddedResource Include="Mantenimientos\Grupos.resx">
       <DependentUpon>Grupos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Medidas.resx">
+      <DependentUpon>Medidas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDIAuditoria.resx">
       <DependentUpon>MDIAuditoria.cs</DependentUpon>
     </EmbeddedResource>
