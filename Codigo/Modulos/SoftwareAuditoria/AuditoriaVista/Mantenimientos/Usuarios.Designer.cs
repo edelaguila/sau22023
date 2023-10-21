@@ -47,8 +47,8 @@ namespace AuditoriaVista.Mantenimientos
             this.txt_respuestaUsuario = new System.Windows.Forms.TextBox();
             this.txt_preguntaUsuario = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.cmb_estadoUsuario = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txt_estadoUsuario = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -206,14 +206,6 @@ namespace AuditoriaVista.Mantenimientos
             this.label9.TabIndex = 17;
             this.label9.Text = "Id";
             // 
-            // cmb_estadoUsuario
-            // 
-            this.cmb_estadoUsuario.FormattingEnabled = true;
-            this.cmb_estadoUsuario.Location = new System.Drawing.Point(629, 281);
-            this.cmb_estadoUsuario.Name = "cmb_estadoUsuario";
-            this.cmb_estadoUsuario.Size = new System.Drawing.Size(137, 21);
-            this.cmb_estadoUsuario.TabIndex = 18;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -222,13 +214,20 @@ namespace AuditoriaVista.Mantenimientos
             this.dataGridView1.Size = new System.Drawing.Size(663, 115);
             this.dataGridView1.TabIndex = 19;
             // 
+            // txt_estadoUsuario
+            // 
+            this.txt_estadoUsuario.Location = new System.Drawing.Point(629, 281);
+            this.txt_estadoUsuario.Name = "txt_estadoUsuario";
+            this.txt_estadoUsuario.Size = new System.Drawing.Size(137, 20);
+            this.txt_estadoUsuario.TabIndex = 20;
+            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txt_estadoUsuario);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.cmb_estadoUsuario);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txt_respuestaUsuario);
             this.Controls.Add(this.txt_preguntaUsuario);
@@ -275,7 +274,7 @@ namespace AuditoriaVista.Mantenimientos
         private System.Windows.Forms.TextBox txt_respuestaUsuario;
         private System.Windows.Forms.TextBox txt_preguntaUsuario;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cmb_estadoUsuario;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txt_estadoUsuario;
     }
 }
