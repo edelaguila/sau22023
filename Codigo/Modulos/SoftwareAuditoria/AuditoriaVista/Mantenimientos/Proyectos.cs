@@ -16,5 +16,15 @@ namespace AuditoriaVista.Mantenimientos
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Proyectos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
