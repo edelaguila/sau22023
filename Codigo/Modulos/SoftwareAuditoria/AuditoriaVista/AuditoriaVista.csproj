@@ -167,6 +167,9 @@
     <EmbeddedResource Include="Mantenimientos\Medidas.resx">
       <DependentUpon>Medidas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Prioridades.resx">
+      <DependentUpon>Prioridades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Recursos.resx">
       <DependentUpon>Recursos.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Informes.resx">
       <DependentUpon>Informes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Rubricas.resx">
+      <DependentUpon>Rubricas.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

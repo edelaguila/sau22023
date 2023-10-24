@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS tbl_consultainteligente2 (
 
 /*---------Reporteria----------*/
 
-CREATE TABLE tbl_regreporteria (
+CREATE TABLE IF NOT EXISTS tbl_regreporteria (
   idregistro int NOT NULL AUTO_INCREMENT,
   ruta varchar(500) NOT NULL,
   nombre_archivo varchar(45) NOT NULL,
@@ -316,6 +316,14 @@ CREATE TABLE IF NOT EXISTS `tbl_actividades`(
     FOREIGN KEY (fk_id_recurso) REFERENCES tbl_recursos(pk_id_recurso),
     FOREIGN KEY (fk_id_prioridad) REFERENCES tbl_prioridades(pk_id_prioridad),
     FOREIGN KEY (fk_id_grupo) REFERENCES tbl_grupos(pk_id_asignacion_grupo)
+);
+
+CREATE TABLE IF NOT EXISTS `tbl_rubrica`(
+    pk_id_rubrica INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    fk_id_aspecto INT NOT NULL,
+    descripcion_rubrica VARCHAR(255) NOT NULL,
+    estado_rubrica tinyint NOT NULL DEFAULT 1
+    -- FOREIGN KEY (fk_id_aspecto) REFERENCES tbl_ (pk_id_aspecto)
 );
 
 CREATE TABLE IF NOT EXISTS `tbl_informes`(
