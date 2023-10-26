@@ -44,6 +44,8 @@ namespace AuditoriaVista.Mantenimientos
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dtgGrupos = new System.Windows.Forms.DataGridView();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
+            this.txtFechaCreacio = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgGrupos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +72,7 @@ namespace AuditoriaVista.Mantenimientos
             this.txtEncargado.Name = "txtEncargado";
             this.txtEncargado.Size = new System.Drawing.Size(61, 20);
             this.txtEncargado.TabIndex = 2;
+            this.txtEncargado.Tag = "fk_id_encargado";
             // 
             // label7
             // 
@@ -86,6 +89,7 @@ namespace AuditoriaVista.Mantenimientos
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(30, 20);
             this.txtId.TabIndex = 29;
+            this.txtId.Tag = "pk_id_asignacion_grupo";
             // 
             // dtpFecha
             // 
@@ -133,10 +137,11 @@ namespace AuditoriaVista.Mantenimientos
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(578, 265);
+            this.txtEstado.Location = new System.Drawing.Point(624, 265);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(30, 20);
+            this.txtEstado.Size = new System.Drawing.Size(54, 20);
             this.txtEstado.TabIndex = 21;
+            this.txtEstado.Tag = "estado_grupo";
             // 
             // txtDescripcion
             // 
@@ -145,6 +150,7 @@ namespace AuditoriaVista.Mantenimientos
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(231, 66);
             this.txtDescripcion.TabIndex = 18;
+            this.txtDescripcion.Tag = "descripcion_grupo";
             // 
             // txtNombre
             // 
@@ -152,6 +158,7 @@ namespace AuditoriaVista.Mantenimientos
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(234, 20);
             this.txtNombre.TabIndex = 17;
+            this.txtNombre.Tag = "nombre_grupo";
             // 
             // label4
             // 
@@ -169,12 +176,35 @@ namespace AuditoriaVista.Mantenimientos
             this.dtgGrupos.Name = "dtgGrupos";
             this.dtgGrupos.Size = new System.Drawing.Size(776, 178);
             this.dtgGrupos.TabIndex = 32;
+            this.dtgGrupos.Tag = "tbl_grupos";
+            // 
+            // cbEstado
+            // 
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Items.AddRange(new object[] {
+            "1",
+            "0"});
+            this.cbEstado.Location = new System.Drawing.Point(578, 265);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(40, 21);
+            this.cbEstado.TabIndex = 33;
+            // 
+            // txtFechaCreacio
+            // 
+            this.txtFechaCreacio.Location = new System.Drawing.Point(684, 211);
+            this.txtFechaCreacio.Name = "txtFechaCreacio";
+            this.txtFechaCreacio.Size = new System.Drawing.Size(86, 20);
+            this.txtFechaCreacio.TabIndex = 34;
+            this.txtFechaCreacio.Tag = "fecha_creacion_grupo";
+            this.txtFechaCreacio.Visible = false;
             // 
             // Grupos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 496);
+            this.Controls.Add(this.txtFechaCreacio);
+            this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.dtgGrupos);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label7);
@@ -216,5 +246,7 @@ namespace AuditoriaVista.Mantenimientos
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dtgGrupos;
+        private System.Windows.Forms.ComboBox cbEstado;
+        private System.Windows.Forms.TextBox txtFechaCreacio;
     }
 }

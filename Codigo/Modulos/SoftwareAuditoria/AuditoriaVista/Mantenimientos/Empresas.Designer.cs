@@ -29,13 +29,11 @@ namespace AuditoriaVista.Mantenimientos
         /// </summary>
         private void InitializeComponent()
         {
-            this.navegador1 = new NavegadorVista.Navegador();
             this.dtgEmpresa = new System.Windows.Forms.DataGridView();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,15 +43,12 @@ namespace AuditoriaVista.Mantenimientos
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.navegador1 = new NavegadorVista.Navegador();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.txtFecha = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEmpresa)).BeginInit();
             this.SuspendLayout();
-            // 
-            // navegador1
-            // 
-            this.navegador1.Location = new System.Drawing.Point(99, 12);
-            this.navegador1.Name = "navegador1";
-            this.navegador1.Size = new System.Drawing.Size(574, 152);
-            this.navegador1.TabIndex = 0;
             // 
             // dtgEmpresa
             // 
@@ -62,6 +57,7 @@ namespace AuditoriaVista.Mantenimientos
             this.dtgEmpresa.Name = "dtgEmpresa";
             this.dtgEmpresa.Size = new System.Drawing.Size(776, 178);
             this.dtgEmpresa.TabIndex = 1;
+            this.dtgEmpresa.Tag = "tbl_empresas";
             // 
             // txtNombre
             // 
@@ -69,6 +65,7 @@ namespace AuditoriaVista.Mantenimientos
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(234, 20);
             this.txtNombre.TabIndex = 2;
+            this.txtNombre.Tag = "nombre_empresa";
             // 
             // txtDireccion
             // 
@@ -77,6 +74,7 @@ namespace AuditoriaVista.Mantenimientos
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(234, 38);
             this.txtDireccion.TabIndex = 3;
+            this.txtDireccion.Tag = "direccion_empresa";
             // 
             // txtTelefono
             // 
@@ -84,6 +82,7 @@ namespace AuditoriaVista.Mantenimientos
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(144, 20);
             this.txtTelefono.TabIndex = 4;
+            this.txtTelefono.Tag = "telefono_empresa";
             // 
             // txtCorreo
             // 
@@ -91,13 +90,7 @@ namespace AuditoriaVista.Mantenimientos
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(234, 20);
             this.txtCorreo.TabIndex = 5;
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(536, 269);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(30, 20);
-            this.txtEstado.TabIndex = 7;
+            this.txtCorreo.Tag = "correo_empresa";
             // 
             // label1
             // 
@@ -160,6 +153,7 @@ namespace AuditoriaVista.Mantenimientos
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(100, 20);
             this.dtpFecha.TabIndex = 14;
+            this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
             // 
             // label7
             // 
@@ -176,12 +170,54 @@ namespace AuditoriaVista.Mantenimientos
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(30, 20);
             this.txtId.TabIndex = 15;
+            this.txtId.Tag = "pk_id_empresa";
+            // 
+            // navegador1
+            // 
+            this.navegador1.Location = new System.Drawing.Point(99, 12);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Size = new System.Drawing.Size(574, 152);
+            this.navegador1.TabIndex = 0;
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
+            // 
+            // cbEstado
+            // 
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Items.AddRange(new object[] {
+            "Inactivo",
+            "Activo"});
+            this.cbEstado.Location = new System.Drawing.Point(536, 272);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(100, 21);
+            this.cbEstado.TabIndex = 17;
+            this.cbEstado.SelectedIndexChanged += new System.EventHandler(this.cbEstado_SelectedIndexChanged);
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.Location = new System.Drawing.Point(642, 273);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(81, 20);
+            this.txtEstado.TabIndex = 18;
+            this.txtEstado.Tag = "estado_empresa";
+            this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.Location = new System.Drawing.Point(642, 215);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(81, 20);
+            this.txtFecha.TabIndex = 19;
+            this.txtFecha.Tag = "fechaCreacion_empresa";
+            this.txtFecha.Visible = false;
             // 
             // Empresas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 510);
+            this.Controls.Add(this.txtFecha);
+            this.Controls.Add(this.txtEstado);
+            this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.dtpFecha);
@@ -191,7 +227,6 @@ namespace AuditoriaVista.Mantenimientos
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtDireccion);
@@ -215,7 +250,6 @@ namespace AuditoriaVista.Mantenimientos
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -225,5 +259,8 @@ namespace AuditoriaVista.Mantenimientos
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.ComboBox cbEstado;
+        private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.TextBox txtFecha;
     }
 }

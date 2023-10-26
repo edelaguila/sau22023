@@ -16,5 +16,10 @@ namespace AuditoriaVista.Mantenimientos
         {
             InitializeComponent();
         }
+
+        private void Prioridades_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
