@@ -34,12 +34,12 @@ namespace AuditoriaVista.Mantenimientos
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtid = new System.Windows.Forms.TextBox();
+            this.dgvMedidas = new System.Windows.Forms.DataGridView();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedidas)).BeginInit();
             this.SuspendLayout();
             // 
             // navegador1
@@ -48,6 +48,7 @@ namespace AuditoriaVista.Mantenimientos
             this.navegador1.Name = "navegador1";
             this.navegador1.Size = new System.Drawing.Size(574, 152);
             this.navegador1.TabIndex = 0;
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
             // 
             // label1
             // 
@@ -85,52 +86,57 @@ namespace AuditoriaVista.Mantenimientos
             this.label4.TabIndex = 4;
             this.label4.Text = "Estado";
             // 
-            // textBox1
+            // txtid
             // 
-            this.textBox1.Location = new System.Drawing.Point(129, 200);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtid.Location = new System.Drawing.Point(129, 200);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(100, 20);
+            this.txtid.TabIndex = 5;
+            this.txtid.Tag = "pk_id_medida";
             // 
-            // dataGridView1
+            // dgvMedidas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 315);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(683, 258);
-            this.dataGridView1.TabIndex = 6;
+            this.dgvMedidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMedidas.Location = new System.Drawing.Point(21, 315);
+            this.dgvMedidas.Name = "dgvMedidas";
+            this.dgvMedidas.Size = new System.Drawing.Size(683, 258);
+            this.dgvMedidas.TabIndex = 6;
+            this.dgvMedidas.Tag = "tbl_medidas";
             // 
-            // textBox2
+            // txtnombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(129, 247);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 7;
+            this.txtnombre.Location = new System.Drawing.Point(129, 247);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(100, 20);
+            this.txtnombre.TabIndex = 7;
+            this.txtnombre.Tag = "nombre_medida";
             // 
-            // textBox3
+            // txtDescripcion
             // 
-            this.textBox3.Location = new System.Drawing.Point(398, 200);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(248, 20);
-            this.textBox3.TabIndex = 8;
+            this.txtDescripcion.Location = new System.Drawing.Point(398, 200);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(248, 20);
+            this.txtDescripcion.TabIndex = 8;
+            this.txtDescripcion.Tag = "descripcion_medida";
             // 
-            // textBox4
+            // txtEstado
             // 
-            this.textBox4.Location = new System.Drawing.Point(398, 247);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(90, 20);
-            this.textBox4.TabIndex = 9;
+            this.txtEstado.Location = new System.Drawing.Point(398, 247);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(90, 20);
+            this.txtEstado.TabIndex = 9;
+            this.txtEstado.Tag = "estado_medida";
             // 
             // Medidas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(723, 608);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtEstado);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtnombre);
+            this.Controls.Add(this.dgvMedidas);
+            this.Controls.Add(this.txtid);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -138,7 +144,7 @@ namespace AuditoriaVista.Mantenimientos
             this.Controls.Add(this.navegador1);
             this.Name = "Medidas";
             this.Text = "Medidas";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedidas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,10 +157,10 @@ namespace AuditoriaVista.Mantenimientos
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtid;
+        private System.Windows.Forms.DataGridView dgvMedidas;
+        private System.Windows.Forms.TextBox txtnombre;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtEstado;
     }
 }
