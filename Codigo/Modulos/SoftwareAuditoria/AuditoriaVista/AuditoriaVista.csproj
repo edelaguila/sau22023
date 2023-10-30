@@ -182,6 +182,9 @@
     <EmbeddedResource Include="MDIAuditoria.resx">
       <DependentUpon>MDIAuditoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Actividades.resx">
+      <DependentUpon>Actividades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Procesos\AyudaInformes.resx">
       <DependentUpon>AyudaInformes.cs</DependentUpon>
     </EmbeddedResource>
