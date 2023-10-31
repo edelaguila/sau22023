@@ -35,8 +35,6 @@ namespace AuditoriaVista.Mantenimientos
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.txt_idUsuario = new System.Windows.Forms.TextBox();
             this.navegador1 = new NavegadorVista.Navegador();
             this.txt_nombreUsuario = new System.Windows.Forms.TextBox();
@@ -44,11 +42,9 @@ namespace AuditoriaVista.Mantenimientos
             this.txt_correoUsuario = new System.Windows.Forms.TextBox();
             this.txt_passUsuario = new System.Windows.Forms.TextBox();
             this.txt_userUsuario = new System.Windows.Forms.TextBox();
-            this.txt_respuestaUsuario = new System.Windows.Forms.TextBox();
-            this.txt_preguntaUsuario = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txt_estadoUsuario = new System.Windows.Forms.TextBox();
+            this.txt_estado = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,7 +92,7 @@ namespace AuditoriaVista.Mantenimientos
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(542, 282);
+            this.label5.Location = new System.Drawing.Point(560, 227);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 21);
             this.label5.TabIndex = 5;
@@ -112,33 +108,13 @@ namespace AuditoriaVista.Mantenimientos
             this.label6.TabIndex = 4;
             this.label6.Text = "Correo";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(542, 229);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 21);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Respuesta";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(542, 179);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 21);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Pregunta";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // txt_idUsuario
             // 
             this.txt_idUsuario.Location = new System.Drawing.Point(103, 179);
             this.txt_idUsuario.Name = "txt_idUsuario";
             this.txt_idUsuario.Size = new System.Drawing.Size(137, 20);
             this.txt_idUsuario.TabIndex = 8;
+            this.txt_idUsuario.Tag = "pk_id_usurioAuditoria";
             // 
             // navegador1
             // 
@@ -146,6 +122,7 @@ namespace AuditoriaVista.Mantenimientos
             this.navegador1.Name = "navegador1";
             this.navegador1.Size = new System.Drawing.Size(574, 152);
             this.navegador1.TabIndex = 9;
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
             // 
             // txt_nombreUsuario
             // 
@@ -153,6 +130,7 @@ namespace AuditoriaVista.Mantenimientos
             this.txt_nombreUsuario.Name = "txt_nombreUsuario";
             this.txt_nombreUsuario.Size = new System.Drawing.Size(137, 20);
             this.txt_nombreUsuario.TabIndex = 10;
+            this.txt_nombreUsuario.Tag = "nombre_usuarioAuditoria";
             // 
             // txt_apellidoUsuario
             // 
@@ -160,6 +138,7 @@ namespace AuditoriaVista.Mantenimientos
             this.txt_apellidoUsuario.Name = "txt_apellidoUsuario";
             this.txt_apellidoUsuario.Size = new System.Drawing.Size(137, 20);
             this.txt_apellidoUsuario.TabIndex = 11;
+            this.txt_apellidoUsuario.Tag = "apellido_usuarioAuditoria";
             // 
             // txt_correoUsuario
             // 
@@ -167,6 +146,7 @@ namespace AuditoriaVista.Mantenimientos
             this.txt_correoUsuario.Name = "txt_correoUsuario";
             this.txt_correoUsuario.Size = new System.Drawing.Size(137, 20);
             this.txt_correoUsuario.TabIndex = 14;
+            this.txt_correoUsuario.Tag = "correo_usuarioAuditoria";
             // 
             // txt_passUsuario
             // 
@@ -174,6 +154,7 @@ namespace AuditoriaVista.Mantenimientos
             this.txt_passUsuario.Name = "txt_passUsuario";
             this.txt_passUsuario.Size = new System.Drawing.Size(137, 20);
             this.txt_passUsuario.TabIndex = 13;
+            this.txt_passUsuario.Tag = "password_usuarioAuditoria";
             // 
             // txt_userUsuario
             // 
@@ -181,20 +162,7 @@ namespace AuditoriaVista.Mantenimientos
             this.txt_userUsuario.Name = "txt_userUsuario";
             this.txt_userUsuario.Size = new System.Drawing.Size(137, 20);
             this.txt_userUsuario.TabIndex = 12;
-            // 
-            // txt_respuestaUsuario
-            // 
-            this.txt_respuestaUsuario.Location = new System.Drawing.Point(629, 227);
-            this.txt_respuestaUsuario.Name = "txt_respuestaUsuario";
-            this.txt_respuestaUsuario.Size = new System.Drawing.Size(137, 20);
-            this.txt_respuestaUsuario.TabIndex = 16;
-            // 
-            // txt_preguntaUsuario
-            // 
-            this.txt_preguntaUsuario.Location = new System.Drawing.Point(629, 177);
-            this.txt_preguntaUsuario.Name = "txt_preguntaUsuario";
-            this.txt_preguntaUsuario.Size = new System.Drawing.Size(137, 20);
-            this.txt_preguntaUsuario.TabIndex = 15;
+            this.txt_userUsuario.Tag = "username_usuarioAuditoria";
             // 
             // label9
             // 
@@ -213,24 +181,24 @@ namespace AuditoriaVista.Mantenimientos
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(663, 115);
             this.dataGridView1.TabIndex = 19;
+            this.dataGridView1.Tag = "tbl_usuariosauditoria";
             // 
-            // txt_estadoUsuario
+            // txt_estado
             // 
-            this.txt_estadoUsuario.Location = new System.Drawing.Point(629, 281);
-            this.txt_estadoUsuario.Name = "txt_estadoUsuario";
-            this.txt_estadoUsuario.Size = new System.Drawing.Size(137, 20);
-            this.txt_estadoUsuario.TabIndex = 20;
+            this.txt_estado.Location = new System.Drawing.Point(622, 229);
+            this.txt_estado.Name = "txt_estado";
+            this.txt_estado.Size = new System.Drawing.Size(137, 20);
+            this.txt_estado.TabIndex = 21;
+            this.txt_estado.Tag = "estado_usuarioAuditoria";
             // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txt_estadoUsuario);
+            this.Controls.Add(this.txt_estado);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txt_respuestaUsuario);
-            this.Controls.Add(this.txt_preguntaUsuario);
             this.Controls.Add(this.txt_correoUsuario);
             this.Controls.Add(this.txt_passUsuario);
             this.Controls.Add(this.txt_userUsuario);
@@ -238,8 +206,6 @@ namespace AuditoriaVista.Mantenimientos
             this.Controls.Add(this.txt_nombreUsuario);
             this.Controls.Add(this.navegador1);
             this.Controls.Add(this.txt_idUsuario);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
@@ -262,8 +228,6 @@ namespace AuditoriaVista.Mantenimientos
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_idUsuario;
         private NavegadorVista.Navegador navegador1;
         private System.Windows.Forms.TextBox txt_nombreUsuario;
@@ -271,10 +235,8 @@ namespace AuditoriaVista.Mantenimientos
         private System.Windows.Forms.TextBox txt_correoUsuario;
         private System.Windows.Forms.TextBox txt_passUsuario;
         private System.Windows.Forms.TextBox txt_userUsuario;
-        private System.Windows.Forms.TextBox txt_respuestaUsuario;
-        private System.Windows.Forms.TextBox txt_preguntaUsuario;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txt_estadoUsuario;
+        private System.Windows.Forms.TextBox txt_estado;
     }
 }
