@@ -29,46 +29,48 @@ namespace AuditoriaVista.Mantenimientos
         /// </summary>
         private void InitializeComponent()
         {
-            this.dtgGrupos = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgGrupos)).BeginInit();
+            this.dtgAyudaGrupos = new System.Windows.Forms.DataGridView();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgAyudaGrupos)).BeginInit();
             this.SuspendLayout();
             // 
-            // dtgGrupos
+            // dtgAyudaGrupos
             // 
-            this.dtgGrupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgGrupos.Location = new System.Drawing.Point(12, 57);
-            this.dtgGrupos.Name = "dtgGrupos";
-            this.dtgGrupos.Size = new System.Drawing.Size(326, 149);
-            this.dtgGrupos.TabIndex = 33;
+            this.dtgAyudaGrupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgAyudaGrupos.Location = new System.Drawing.Point(12, 57);
+            this.dtgAyudaGrupos.Name = "dtgAyudaGrupos";
+            this.dtgAyudaGrupos.Size = new System.Drawing.Size(326, 149);
+            this.dtgAyudaGrupos.TabIndex = 33;
             // 
-            // button1
+            // btnAgregar
             // 
-            this.button1.Location = new System.Drawing.Point(125, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 28);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAgregar.Location = new System.Drawing.Point(125, 12);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(106, 28);
+            this.btnAgregar.TabIndex = 34;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // AyudaGrupos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 221);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dtgGrupos);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.dtgAyudaGrupos);
             this.Name = "AyudaGrupos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AyudaGrupos";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgGrupos)).EndInit();
+            this.Load += new System.EventHandler(this.AyudaGrupos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgAyudaGrupos)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dtgGrupos;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dtgAyudaGrupos;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }
