@@ -90,5 +90,10 @@ namespace AuditoriaVista.Mantenimientos
             navegador1.actual = this;
             navegador1.cargar(dataGridView1, Grupotextbox, "Risko");
         }
+
+        private void Recursos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
