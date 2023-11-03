@@ -48,6 +48,7 @@ namespace AuditoriaVista.Mantenimientos
             this.navegador1.Name = "navegador1";
             this.navegador1.Size = new System.Drawing.Size(574, 152);
             this.navegador1.TabIndex = 0;
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
             // 
             // dataGridView1
             // 
@@ -56,6 +57,7 @@ namespace AuditoriaVista.Mantenimientos
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(663, 168);
             this.dataGridView1.TabIndex = 38;
+            this.dataGridView1.Tag = "tbl_estandares";
             // 
             // label9
             // 
@@ -73,6 +75,7 @@ namespace AuditoriaVista.Mantenimientos
             this.txt_normaEstandar.Name = "txt_normaEstandar";
             this.txt_normaEstandar.Size = new System.Drawing.Size(137, 20);
             this.txt_normaEstandar.TabIndex = 35;
+            this.txt_normaEstandar.Tag = "norma_estandar";
             // 
             // txt_nombreEstandar
             // 
@@ -80,6 +83,7 @@ namespace AuditoriaVista.Mantenimientos
             this.txt_nombreEstandar.Name = "txt_nombreEstandar";
             this.txt_nombreEstandar.Size = new System.Drawing.Size(137, 20);
             this.txt_nombreEstandar.TabIndex = 32;
+            this.txt_nombreEstandar.Tag = "nombre_estandar";
             // 
             // txt_estadoEstandar
             // 
@@ -87,6 +91,7 @@ namespace AuditoriaVista.Mantenimientos
             this.txt_estadoEstandar.Name = "txt_estadoEstandar";
             this.txt_estadoEstandar.Size = new System.Drawing.Size(137, 20);
             this.txt_estadoEstandar.TabIndex = 30;
+            this.txt_estadoEstandar.Tag = "estado_estandar";
             // 
             // txt_idEstandar
             // 
@@ -94,6 +99,7 @@ namespace AuditoriaVista.Mantenimientos
             this.txt_idEstandar.Name = "txt_idEstandar";
             this.txt_idEstandar.Size = new System.Drawing.Size(137, 20);
             this.txt_idEstandar.TabIndex = 29;
+            this.txt_idEstandar.Tag = "pk_id_estandar";
             // 
             // label8
             // 

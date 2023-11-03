@@ -21,7 +21,10 @@ INSERT INTO `tbl_aplicaciones` VALUES
 ('1103', 'Asign. Perfil Usuario', 'PARA SEGURIDAD', '1'),
 ('1201', 'Pcs. Cambio Contraseña', 'PARA SEGURIDAD', '1'),
 ('1301', 'Pcs. BITACORA', 'PARA SEGURIDAD', '1'),
-('2000', 'MDI VENTAS', 'PARA AUDITORIA', '1')
+('2000', 'MDI VENTAS', 'PARA AUDITORIA', '1'),
+('3001', 'Proyectos', 'PARA AUDITORIA', '1'),
+('3002', 'Asignacion grupos', 'PARA AUDITORIA', '1'),
+('3101', 'Estandares', 'PARA AUDITORIA', '1')
 ;
 
 -- -----USUARIOS
@@ -49,7 +52,10 @@ INSERT INTO `tbl_asignacionmoduloaplicacion` VALUES
 ('1000', '1103'),
 ('1000', '1201'),
 ('1000', '1301'),
-('2000', '2000')
+('2000', '2000'),
+('2000', '3001'),
+('2000', '3002'),
+('2000', '3101')
 ;
 
 -- -----PERMISOS DE APLICACIONES A PERFILES
@@ -65,6 +71,9 @@ INSERT INTO `tbl_permisosAplicacionPerfil` VALUES
 ('1', '1201', '1', '1', '1', '1', '1'),
 ('1', '1301', '1', '1', '1', '1', '1'),
 ('1', '2000', '1', '1', '1', '1', '1'),
+('1', '3001', '1', '1', '1', '1', '1'),
+('1', '3002', '1', '1', '1', '1', '1'),
+('1', '3101', '1', '1', '1', '1', '1'),
 ('2', '1000', '1', '1', '1', '1', '1'),
 ('2', '1001', '1', '1', '1', '1', '1'),
 ('2', '1002', '1', '1', '1', '1', '1'),
