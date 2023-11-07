@@ -165,7 +165,7 @@ VIEW risko.vista_aplicacion_perfil AS
         b.imprimir_permiso AS Reporte
     FROM
         (risko.tbl_permisosaplicacionperfil b
-        JOIN sig.tbl_perfiles a ON ((a.pk_id_perfil = b.fk_id_perfil)));
+        JOIN risko.tbl_perfiles a ON ((a.pk_id_perfil = b.fk_id_perfil)));
         
 CREATE 
 VIEW risko.vista_aplicacionusuario AS
