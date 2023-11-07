@@ -124,6 +124,10 @@ namespace AuditoriaVista.Procesos
             
         }
 
-        
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            string rutaAyuda = "../../../../../../../Ayudas/Asignación Grupos/AsignacionGrupos.chm";
+            Help.ShowHelp(ParentForm, rutaAyuda, "AGrupos.html");
+        }
     }
 }
