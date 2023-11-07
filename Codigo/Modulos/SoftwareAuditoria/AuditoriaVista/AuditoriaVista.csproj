@@ -134,11 +134,17 @@
     <Compile Include="Procesos\AyudaGrupo.Designer.cs">
       <DependentUpon>AyudaGrupo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Procesos\AyudaInformes.cs">
+    <Compile Include="Procesos\AyudaInformeActividad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Procesos\AyudaInformes.Designer.cs">
-      <DependentUpon>AyudaInformes.cs</DependentUpon>
+    <Compile Include="Procesos\AyudaInformeActividad.designer.cs">
+      <DependentUpon>AyudaInformeActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\AyudaInformeGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\AyudaInformeGrupo.designer.cs">
+      <DependentUpon>AyudaInformeGrupo.cs</DependentUpon>
     </Compile>
     <Compile Include="Procesos\AyudaUsuario.cs">
       <SubType>Form</SubType>
@@ -149,7 +155,7 @@
     <Compile Include="Procesos\Informes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Procesos\Informes.Designer.cs">
+    <Compile Include="Procesos\Informes.designer.cs">
       <DependentUpon>Informes.cs</DependentUpon>
     </Compile>
     <Compile Include="Procesos\Rubricas.cs">
@@ -210,8 +216,11 @@
     <EmbeddedResource Include="Procesos\AyudaGrupo.resx">
       <DependentUpon>AyudaGrupo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Procesos\AyudaInformes.resx">
-      <DependentUpon>AyudaInformes.cs</DependentUpon>
+    <EmbeddedResource Include="Procesos\AyudaInformeActividad.resx">
+      <DependentUpon>AyudaInformeActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\AyudaInformeGrupo.resx">
+      <DependentUpon>AyudaInformeGrupo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\AyudaUsuario.resx">
       <DependentUpon>AyudaUsuario.cs</DependentUpon>
