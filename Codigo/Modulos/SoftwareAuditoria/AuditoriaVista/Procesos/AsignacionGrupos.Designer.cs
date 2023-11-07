@@ -29,33 +29,43 @@ namespace AuditoriaVista.Procesos
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_estadoasignacion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
-            this.txt_normaEstandar = new System.Windows.Forms.TextBox();
-            this.txt_nombreEstandar = new System.Windows.Forms.TextBox();
-            this.txt_idEstandar = new System.Windows.Forms.TextBox();
+            this.txt_UsuarioAsignacion = new System.Windows.Forms.TextBox();
+            this.txt_idGrupoasignacion = new System.Windows.Forms.TextBox();
+            this.txt_idAsignacion = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.navegador1 = new NavegadorVista.Navegador();
+            this.btnInsert = new FontAwesome.Sharp.IconButton();
+            this.btnCancelar = new FontAwesome.Sharp.IconButton();
+            this.btnHelp = new FontAwesome.Sharp.IconButton();
+            this.btnExit = new FontAwesome.Sharp.IconButton();
+            this.btnModificar = new FontAwesome.Sharp.IconButton();
+            this.btnDelete = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox3
+            // txt_estadoasignacion
             // 
-            this.textBox3.Location = new System.Drawing.Point(604, 212);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(65, 20);
-            this.textBox3.TabIndex = 74;
+            this.txt_estadoasignacion.Location = new System.Drawing.Point(544, 133);
+            this.txt_estadoasignacion.MaxLength = 1;
+            this.txt_estadoasignacion.Name = "txt_estadoasignacion";
+            this.txt_estadoasignacion.ShortcutsEnabled = false;
+            this.txt_estadoasignacion.Size = new System.Drawing.Size(65, 20);
+            this.txt_estadoasignacion.TabIndex = 74;
+            this.txt_estadoasignacion.Tag = "estado_asignacion_grupo";
+            this.txt_estadoasignacion.TextChanged += new System.EventHandler(this.txt_estadoasignacion_TextChanged);
+            this.txt_estadoasignacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_estadoasignacion_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(542, 212);
+            this.label5.Location = new System.Drawing.Point(482, 131);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 21);
             this.label5.TabIndex = 73;
@@ -63,108 +73,230 @@ namespace AuditoriaVista.Procesos
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(507, 212);
+            this.button2.Location = new System.Drawing.Point(454, 131);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(22, 20);
             this.button2.TabIndex = 70;
             this.button2.Text = "?";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(342, 211);
+            this.button1.Location = new System.Drawing.Point(270, 132);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(22, 20);
             this.button1.TabIndex = 69;
             this.button1.Text = "?";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(73, 262);
+            this.dataGridView1.Location = new System.Drawing.Point(8, 182);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(663, 151);
+            this.dataGridView1.Size = new System.Drawing.Size(645, 187);
             this.dataGridView1.TabIndex = 68;
+            this.dataGridView1.Tag = "tbl_asignacion_grupo";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(121, 211);
+            this.label9.Location = new System.Drawing.Point(49, 132);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(29, 21);
             this.label9.TabIndex = 67;
             this.label9.Text = "ID ";
             // 
-            // txt_normaEstandar
+            // txt_UsuarioAsignacion
             // 
-            this.txt_normaEstandar.Location = new System.Drawing.Point(454, 211);
-            this.txt_normaEstandar.Name = "txt_normaEstandar";
-            this.txt_normaEstandar.Size = new System.Drawing.Size(47, 20);
-            this.txt_normaEstandar.TabIndex = 66;
+            this.txt_UsuarioAsignacion.Enabled = false;
+            this.txt_UsuarioAsignacion.Location = new System.Drawing.Point(401, 131);
+            this.txt_UsuarioAsignacion.Name = "txt_UsuarioAsignacion";
+            this.txt_UsuarioAsignacion.Size = new System.Drawing.Size(47, 20);
+            this.txt_UsuarioAsignacion.TabIndex = 66;
+            this.txt_UsuarioAsignacion.Tag = "fk_id_usuario";
             // 
-            // txt_nombreEstandar
+            // txt_idGrupoasignacion
             // 
-            this.txt_nombreEstandar.Location = new System.Drawing.Point(284, 211);
-            this.txt_nombreEstandar.Name = "txt_nombreEstandar";
-            this.txt_nombreEstandar.Size = new System.Drawing.Size(52, 20);
-            this.txt_nombreEstandar.TabIndex = 65;
+            this.txt_idGrupoasignacion.Enabled = false;
+            this.txt_idGrupoasignacion.Location = new System.Drawing.Point(212, 132);
+            this.txt_idGrupoasignacion.Name = "txt_idGrupoasignacion";
+            this.txt_idGrupoasignacion.Size = new System.Drawing.Size(52, 20);
+            this.txt_idGrupoasignacion.TabIndex = 65;
+            this.txt_idGrupoasignacion.Tag = "fk_id_grupo";
             // 
-            // txt_idEstandar
+            // txt_idAsignacion
             // 
-            this.txt_idEstandar.Location = new System.Drawing.Point(156, 211);
-            this.txt_idEstandar.Name = "txt_idEstandar";
-            this.txt_idEstandar.Size = new System.Drawing.Size(49, 20);
-            this.txt_idEstandar.TabIndex = 63;
+            this.txt_idAsignacion.Location = new System.Drawing.Point(84, 132);
+            this.txt_idAsignacion.Name = "txt_idAsignacion";
+            this.txt_idAsignacion.ShortcutsEnabled = false;
+            this.txt_idAsignacion.Size = new System.Drawing.Size(49, 20);
+            this.txt_idAsignacion.TabIndex = 63;
+            this.txt_idAsignacion.Tag = "pk_id_asignacion_grupo";
+            this.txt_idAsignacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_idAsignacion_KeyPress);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(370, 210);
+            this.label8.Location = new System.Drawing.Point(298, 131);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 21);
+            this.label8.Size = new System.Drawing.Size(102, 21);
             this.label8.TabIndex = 62;
-            this.label8.Text = "ID Usuario";
+            this.label8.Text = "ID Encargado";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(211, 210);
+            this.label4.Location = new System.Drawing.Point(139, 131);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 21);
             this.label4.TabIndex = 61;
             this.label4.Text = "ID Grupo";
             // 
-            // navegador1
+            // btnInsert
             // 
-            this.navegador1.Location = new System.Drawing.Point(95, 8);
-            this.navegador1.Name = "navegador1";
-            this.navegador1.Size = new System.Drawing.Size(574, 152);
-            this.navegador1.TabIndex = 59;
+            this.btnInsert.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnInsert.FlatAppearance.BorderSize = 2;
+            this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsert.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnInsert.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
+            this.btnInsert.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnInsert.IconSize = 40;
+            this.btnInsert.Location = new System.Drawing.Point(12, 12);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(69, 61);
+            this.btnInsert.TabIndex = 75;
+            this.btnInsert.Text = "Agregar";
+            this.btnInsert.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnCancelar.FlatAppearance.BorderSize = 2;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
+            this.btnCancelar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
+            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnCancelar.IconSize = 40;
+            this.btnCancelar.Location = new System.Drawing.Point(240, 12);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(69, 61);
+            this.btnCancelar.TabIndex = 80;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnHelp.FlatAppearance.BorderSize = 2;
+            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnHelp.IconColor = System.Drawing.Color.DimGray;
+            this.btnHelp.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnHelp.IconSize = 40;
+            this.btnHelp.Location = new System.Drawing.Point(584, 12);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(69, 61);
+            this.btnHelp.TabIndex = 79;
+            this.btnHelp.Text = "Ayuda";
+            this.btnHelp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnHelp.UseVisualStyleBackColor = true;
+            // 
+            // btnExit
+            // 
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnExit.FlatAppearance.BorderSize = 2;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
+            this.btnExit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
+            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnExit.IconSize = 40;
+            this.btnExit.Location = new System.Drawing.Point(509, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(69, 61);
+            this.btnExit.TabIndex = 78;
+            this.btnExit.Text = "Salir";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnModificar.FlatAppearance.BorderSize = 2;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
+            this.btnModificar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
+            this.btnModificar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnModificar.IconSize = 40;
+            this.btnModificar.Location = new System.Drawing.Point(165, 12);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(69, 61);
+            this.btnModificar.TabIndex = 76;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnDelete.FlatAppearance.BorderSize = 2;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnDelete.IconColor = System.Drawing.Color.DimGray;
+            this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnDelete.IconSize = 40;
+            this.btnDelete.Location = new System.Drawing.Point(90, 12);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(69, 61);
+            this.btnDelete.TabIndex = 77;
+            this.btnDelete.Text = "Eliminar";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // AsignacionGrupos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox3);
+            this.ClientSize = new System.Drawing.Size(664, 381);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnHelp);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnInsert);
+            this.Controls.Add(this.txt_estadoasignacion);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txt_normaEstandar);
-            this.Controls.Add(this.txt_nombreEstandar);
-            this.Controls.Add(this.txt_idEstandar);
+            this.Controls.Add(this.txt_UsuarioAsignacion);
+            this.Controls.Add(this.txt_idGrupoasignacion);
+            this.Controls.Add(this.txt_idAsignacion);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.navegador1);
             this.Name = "AsignacionGrupos";
             this.Text = "AsignacionGrupos";
+            this.Load += new System.EventHandler(this.AsignacionGrupos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -172,17 +304,22 @@ namespace AuditoriaVista.Procesos
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_estadoasignacion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txt_normaEstandar;
-        private System.Windows.Forms.TextBox txt_nombreEstandar;
-        private System.Windows.Forms.TextBox txt_idEstandar;
+        private System.Windows.Forms.TextBox txt_UsuarioAsignacion;
+        private System.Windows.Forms.TextBox txt_idGrupoasignacion;
+        private System.Windows.Forms.TextBox txt_idAsignacion;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label4;
-        private NavegadorVista.Navegador navegador1;
+        private FontAwesome.Sharp.IconButton btnInsert;
+        private FontAwesome.Sharp.IconButton btnCancelar;
+        private FontAwesome.Sharp.IconButton btnHelp;
+        private FontAwesome.Sharp.IconButton btnExit;
+        private FontAwesome.Sharp.IconButton btnModificar;
+        private FontAwesome.Sharp.IconButton btnDelete;
     }
 }

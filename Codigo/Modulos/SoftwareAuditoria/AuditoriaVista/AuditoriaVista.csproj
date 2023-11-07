@@ -128,11 +128,23 @@
     <Compile Include="Procesos\AsignacionGrupos.Designer.cs">
       <DependentUpon>AsignacionGrupos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\AyudaGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\AyudaGrupo.Designer.cs">
+      <DependentUpon>AyudaGrupo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\AyudaInformes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Procesos\AyudaInformes.Designer.cs">
       <DependentUpon>AyudaInformes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\AyudaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\AyudaUsuario.Designer.cs">
+      <DependentUpon>AyudaUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Procesos\Informes.cs">
       <SubType>Form</SubType>
@@ -174,6 +186,9 @@
     <EmbeddedResource Include="Mantenimientos\Prioridades.resx">
       <DependentUpon>Prioridades.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Proyectos.resx">
+      <DependentUpon>Proyectos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Recursos.resx">
       <DependentUpon>Recursos.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,8 +204,17 @@
     <EmbeddedResource Include="Procesos\Actividades.resx">
       <DependentUpon>Actividades.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\AsignacionGrupos.resx">
+      <DependentUpon>AsignacionGrupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\AyudaGrupo.resx">
+      <DependentUpon>AyudaGrupo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Procesos\AyudaInformes.resx">
       <DependentUpon>AyudaInformes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\AyudaUsuario.resx">
+      <DependentUpon>AyudaUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Informes.resx">
       <DependentUpon>Informes.cs</DependentUpon>

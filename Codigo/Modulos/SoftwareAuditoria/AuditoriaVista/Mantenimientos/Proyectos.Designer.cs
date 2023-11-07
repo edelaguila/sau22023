@@ -38,7 +38,6 @@ namespace AuditoriaVista.Mantenimientos
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.navegador1 = new NavegadorVista.Navegador();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,22 +46,28 @@ namespace AuditoriaVista.Mantenimientos
             this.label5 = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnCancelar = new FontAwesome.Sharp.IconButton();
+            this.btnHelp = new FontAwesome.Sharp.IconButton();
+            this.btnExit = new FontAwesome.Sharp.IconButton();
+            this.btnModificar = new FontAwesome.Sharp.IconButton();
+            this.btnDelete = new FontAwesome.Sharp.IconButton();
+            this.btnInsert = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(83, 296);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 227);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(663, 151);
+            this.dataGridView1.Size = new System.Drawing.Size(734, 220);
             this.dataGridView1.TabIndex = 48;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(97, 185);
+            this.label9.Location = new System.Drawing.Point(25, 96);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 21);
             this.label9.TabIndex = 47;
@@ -70,28 +75,28 @@ namespace AuditoriaVista.Mantenimientos
             // 
             // txt_normaEstandar
             // 
-            this.txt_normaEstandar.Location = new System.Drawing.Point(528, 188);
+            this.txt_normaEstandar.Location = new System.Drawing.Point(456, 99);
             this.txt_normaEstandar.Name = "txt_normaEstandar";
             this.txt_normaEstandar.Size = new System.Drawing.Size(47, 20);
             this.txt_normaEstandar.TabIndex = 46;
             // 
             // txt_nombreEstandar
             // 
-            this.txt_nombreEstandar.Location = new System.Drawing.Point(341, 187);
+            this.txt_nombreEstandar.Location = new System.Drawing.Point(269, 98);
             this.txt_nombreEstandar.Name = "txt_nombreEstandar";
             this.txt_nombreEstandar.Size = new System.Drawing.Size(52, 20);
             this.txt_nombreEstandar.TabIndex = 45;
             // 
             // txt_estadoEstandar
             // 
-            this.txt_estadoEstandar.Location = new System.Drawing.Point(171, 228);
+            this.txt_estadoEstandar.Location = new System.Drawing.Point(99, 139);
             this.txt_estadoEstandar.Name = "txt_estadoEstandar";
             this.txt_estadoEstandar.Size = new System.Drawing.Size(137, 20);
             this.txt_estadoEstandar.TabIndex = 44;
             // 
             // txt_idEstandar
             // 
-            this.txt_idEstandar.Location = new System.Drawing.Point(187, 186);
+            this.txt_idEstandar.Location = new System.Drawing.Point(115, 97);
             this.txt_idEstandar.Name = "txt_idEstandar";
             this.txt_idEstandar.Size = new System.Drawing.Size(49, 20);
             this.txt_idEstandar.TabIndex = 43;
@@ -100,7 +105,7 @@ namespace AuditoriaVista.Mantenimientos
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(433, 187);
+            this.label8.Location = new System.Drawing.Point(361, 98);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(89, 21);
             this.label8.TabIndex = 42;
@@ -111,7 +116,7 @@ namespace AuditoriaVista.Mantenimientos
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(243, 185);
+            this.label4.Location = new System.Drawing.Point(171, 96);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 21);
             this.label4.TabIndex = 41;
@@ -121,22 +126,15 @@ namespace AuditoriaVista.Mantenimientos
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(97, 228);
+            this.label1.Location = new System.Drawing.Point(25, 139);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 21);
             this.label1.TabIndex = 40;
             this.label1.Text = "Nombre";
             // 
-            // navegador1
-            // 
-            this.navegador1.Location = new System.Drawing.Point(109, 12);
-            this.navegador1.Name = "navegador1";
-            this.navegador1.Size = new System.Drawing.Size(574, 152);
-            this.navegador1.TabIndex = 39;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(399, 187);
+            this.button1.Location = new System.Drawing.Point(327, 98);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(22, 20);
             this.button1.TabIndex = 49;
@@ -145,7 +143,7 @@ namespace AuditoriaVista.Mantenimientos
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(581, 187);
+            this.button2.Location = new System.Drawing.Point(509, 98);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(22, 20);
             this.button2.TabIndex = 50;
@@ -157,7 +155,7 @@ namespace AuditoriaVista.Mantenimientos
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(325, 228);
+            this.label2.Location = new System.Drawing.Point(253, 139);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 21);
             this.label2.TabIndex = 51;
@@ -167,7 +165,7 @@ namespace AuditoriaVista.Mantenimientos
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(534, 229);
+            this.label3.Location = new System.Drawing.Point(462, 140);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 21);
             this.label3.TabIndex = 53;
@@ -175,7 +173,7 @@ namespace AuditoriaVista.Mantenimientos
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(159, 270);
+            this.textBox3.Location = new System.Drawing.Point(87, 181);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(65, 20);
             this.textBox3.TabIndex = 56;
@@ -184,7 +182,7 @@ namespace AuditoriaVista.Mantenimientos
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(97, 270);
+            this.label5.Location = new System.Drawing.Point(25, 181);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 21);
             this.label5.TabIndex = 55;
@@ -193,7 +191,7 @@ namespace AuditoriaVista.Mantenimientos
             // dtpFecha
             // 
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFecha.Location = new System.Drawing.Point(422, 229);
+            this.dtpFecha.Location = new System.Drawing.Point(350, 140);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(100, 20);
             this.dtpFecha.TabIndex = 57;
@@ -201,16 +199,130 @@ namespace AuditoriaVista.Mantenimientos
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(624, 229);
+            this.dateTimePicker1.Location = new System.Drawing.Point(552, 140);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
             this.dateTimePicker1.TabIndex = 58;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnCancelar.FlatAppearance.BorderSize = 2;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
+            this.btnCancelar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
+            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnCancelar.IconSize = 40;
+            this.btnCancelar.Location = new System.Drawing.Point(250, 12);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(69, 61);
+            this.btnCancelar.TabIndex = 86;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnHelp.FlatAppearance.BorderSize = 2;
+            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnHelp.IconColor = System.Drawing.Color.DimGray;
+            this.btnHelp.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnHelp.IconSize = 40;
+            this.btnHelp.Location = new System.Drawing.Point(661, 12);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(69, 61);
+            this.btnHelp.TabIndex = 85;
+            this.btnHelp.Text = "Ayuda";
+            this.btnHelp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnHelp.UseVisualStyleBackColor = true;
+            // 
+            // btnExit
+            // 
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnExit.FlatAppearance.BorderSize = 2;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
+            this.btnExit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
+            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnExit.IconSize = 40;
+            this.btnExit.Location = new System.Drawing.Point(586, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(69, 61);
+            this.btnExit.TabIndex = 84;
+            this.btnExit.Text = "Salir";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnExit.UseVisualStyleBackColor = true;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnModificar.FlatAppearance.BorderSize = 2;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
+            this.btnModificar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
+            this.btnModificar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnModificar.IconSize = 40;
+            this.btnModificar.Location = new System.Drawing.Point(175, 12);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(69, 61);
+            this.btnModificar.TabIndex = 82;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnDelete.FlatAppearance.BorderSize = 2;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnDelete.IconColor = System.Drawing.Color.DimGray;
+            this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnDelete.IconSize = 40;
+            this.btnDelete.Location = new System.Drawing.Point(100, 12);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(69, 61);
+            this.btnDelete.TabIndex = 83;
+            this.btnDelete.Text = "Eliminar";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnInsert
+            // 
+            this.btnInsert.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnInsert.FlatAppearance.BorderSize = 2;
+            this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsert.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnInsert.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
+            this.btnInsert.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnInsert.IconSize = 40;
+            this.btnInsert.Location = new System.Drawing.Point(22, 12);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(69, 61);
+            this.btnInsert.TabIndex = 81;
+            this.btnInsert.Text = "Agregar";
+            this.btnInsert.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnInsert.UseVisualStyleBackColor = true;
             // 
             // Proyectos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 459);
+            this.ClientSize = new System.Drawing.Size(760, 459);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnHelp);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.textBox3);
@@ -228,7 +340,6 @@ namespace AuditoriaVista.Mantenimientos
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.navegador1);
             this.Name = "Proyectos";
             this.Text = "Proyectos";
             this.Load += new System.EventHandler(this.Proyectos_Load);
@@ -249,7 +360,6 @@ namespace AuditoriaVista.Mantenimientos
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private NavegadorVista.Navegador navegador1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
@@ -258,5 +368,11 @@ namespace AuditoriaVista.Mantenimientos
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private FontAwesome.Sharp.IconButton btnCancelar;
+        private FontAwesome.Sharp.IconButton btnHelp;
+        private FontAwesome.Sharp.IconButton btnExit;
+        private FontAwesome.Sharp.IconButton btnModificar;
+        private FontAwesome.Sharp.IconButton btnDelete;
+        private FontAwesome.Sharp.IconButton btnInsert;
     }
 }
