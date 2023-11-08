@@ -69,6 +69,7 @@ namespace AuditoriaVista.Mantenimientos
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(230, 26);
             this.txt_id.TabIndex = 3;
+            this.txt_id.Tag = "pk_id_prioridad";
             // 
             // label3
             // 
@@ -85,6 +86,7 @@ namespace AuditoriaVista.Mantenimientos
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(230, 26);
             this.txt_nombre.TabIndex = 5;
+            this.txt_nombre.Tag = "nombre_prioridad";
             // 
             // label1
             // 
@@ -101,6 +103,7 @@ namespace AuditoriaVista.Mantenimientos
             this.txt_descripcion.Name = "txt_descripcion";
             this.txt_descripcion.Size = new System.Drawing.Size(727, 26);
             this.txt_descripcion.TabIndex = 7;
+            this.txt_descripcion.Tag = "descripcion_prioridad";
             // 
             // label4
             // 
@@ -127,6 +130,7 @@ namespace AuditoriaVista.Mantenimientos
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(861, 392);
             this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.Tag = "tbl_prioridades";
             // 
             // txt_estado
             // 
@@ -134,6 +138,7 @@ namespace AuditoriaVista.Mantenimientos
             this.txt_estado.Name = "txt_estado";
             this.txt_estado.Size = new System.Drawing.Size(230, 26);
             this.txt_estado.TabIndex = 13;
+            this.txt_estado.Tag = "estado_prioridad";
             // 
             // Prioridades
             // 
