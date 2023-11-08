@@ -145,3 +145,5 @@ INSERT INTO `tbl_asignacionesPerfilsUsuario` VALUES
 ('2', '2'),
 ('3', '3')
 ; 
+
+INSERT INTO tbl_regreporteria(idregistro,ruta,nombre_archivo,aplicacion,estado) VALUES(1,'RptPrioridades.rpt','RptPrioridades','2006','visible');
