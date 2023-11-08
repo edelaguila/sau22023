@@ -14,6 +14,7 @@ namespace AuditoriaVista.Mantenimientos
 {
     public partial class Unidades : Form
     {
+
         public Unidades()
         {
             InitializeComponent();
@@ -136,7 +137,7 @@ namespace AuditoriaVista.Mantenimientos
 
         private void navegador1_Load(object sender, EventArgs e)
         {
-            NavegadorVista.Navegador.idApp = "1000";
+            NavegadorVista.Navegador.idApp = "2005";
             TextBox[] Grupotextbox = { txt_idUnidad, txtMedida, txtNombreUnidad, txtDescripcionUnidad, txtEstado};
             TextBox[] Idtextbox = { txt_idUnidad, txtMedida };
             navegador1.textbox = Grupotextbox;

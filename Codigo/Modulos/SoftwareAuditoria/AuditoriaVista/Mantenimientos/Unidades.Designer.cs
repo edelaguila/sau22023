@@ -43,6 +43,7 @@ namespace AuditoriaVista.Mantenimientos
             this.navegador1 = new NavegadorVista.Navegador();
             this.txtMedida = new System.Windows.Forms.TextBox();
             this.txtEstado = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -192,11 +193,21 @@ namespace AuditoriaVista.Mantenimientos
             this.txtEstado.Tag = "estado_unidad";
             this.txtEstado.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(852, 25);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(73, 58);
+            this.button1.TabIndex = 80;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Unidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 725);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtMedida);
             this.Controls.Add(this.navegador1);
@@ -235,5 +246,6 @@ namespace AuditoriaVista.Mantenimientos
         private NavegadorVista.Navegador navegador1;
         private System.Windows.Forms.TextBox txtMedida;
         private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.Button button1;
     }
 }
