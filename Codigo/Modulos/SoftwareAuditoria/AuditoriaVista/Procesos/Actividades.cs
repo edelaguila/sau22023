@@ -36,5 +36,21 @@ namespace AuditoriaVista.Procesos
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int id_actividad = int.Parse(txt_actividad.Text);
+            int id_proyecto = int.Parse(txt_proyecto.Text);
+            int id_recurso =int.Parse(txt_recurso.Text); 
+            int id_prioridad = int.Parse(cb_prioridad.Text);
+            int id_grupo = int.Parse(txt_NoGrupo.Text);
+            string nombre_actividad = txt_NomActividad.Text;
+            DateTime fechaInicio_actividad = dTP_fechaInicio.Value;
+            DateTime fechaFinalizacions_actividad = dTP_fechaFinalizar.Value;
+            float totalTrabajado_actividad = float.Parse(txt_porcentaje.Text);
+            int estado_actividad = int.Parse(cB_estadoActividad.Text);
+
+
+        }
     }
 }
