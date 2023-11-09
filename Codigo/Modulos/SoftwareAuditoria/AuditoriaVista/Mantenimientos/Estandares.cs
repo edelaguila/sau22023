@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Hecho por Mario López
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,11 @@ namespace AuditoriaVista.Mantenimientos
             navegador1.textboxi = Idtextbox;
             navegador1.actual = this;
             navegador1.cargar(dataGridView1, Grupotextbox, "Risko");
+        }
+
+        private void Estandares_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
