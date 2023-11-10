@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AuditoriaControlador.Grupo2;
 using System.Windows.Forms;
-
+//Jonathan Xuyá 0901-18-11371
 namespace AuditoriaVista.Procesos
 {
     public partial class Informes : Form
@@ -123,6 +123,12 @@ namespace AuditoriaVista.Procesos
         private void dtgInforme_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            string rutaAyuda = "../../../../../../../Ayudas/Asignación Grupos/AsignacionGrupos.chm";
+            Help.ShowHelp(ParentForm, rutaAyuda, "AGrupos.html");
         }
     }
 }

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AuditoriaControlador.Grupo3;
-
+//Jonathan Xuyá 0901-18-11371
 namespace AuditoriaVista.Procesos
 {
     public partial class AsignacionGrupos : Form
