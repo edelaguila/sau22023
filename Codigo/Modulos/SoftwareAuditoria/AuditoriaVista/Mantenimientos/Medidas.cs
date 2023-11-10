@@ -19,7 +19,7 @@ namespace AuditoriaVista.Mantenimientos
 
         private void navegador1_Load(object sender, EventArgs e)
         {
-            NavegadorVista.Navegador.idApp = "2000";
+            NavegadorVista.Navegador.idApp = "2004";
             TextBox[] Grupotextbox = { txtid, txtnombre, txtDescripcion, txtEstado };
             TextBox[] Idtextbox = { txtid, txtnombre };
             navegador1.textbox = Grupotextbox;
