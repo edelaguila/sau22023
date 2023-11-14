@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C8703387-ED97-43B4-AFF4-1EA1FB719557}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AuditoriaVista</RootNamespace>
+    <AssemblyName>AuditoriaVista</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AuditoriaModelo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AuditoriaModelo\bin\Debug\AuditoriaModelo.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FontAwesome.Sharp">
+      <HintPath>..\..\..\Componentes\Navegador\Vista\bin\Debug\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="NavegadorVista, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Componentes\Navegador\Vista\bin\Debug\NavegadorVista.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mantenimientos\AyudaGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\AyudaGrupos.Designer.cs">
+      <DependentUpon>AyudaGrupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Empresas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Empresas.Designer.cs">
+      <DependentUpon>Empresas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Estandares.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Estandares.Designer.cs">
+      <DependentUpon>Estandares.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Grupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Grupos.Designer.cs">
+      <DependentUpon>Grupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Medidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Medidas.Designer.cs">
+      <DependentUpon>Medidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Prioridades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Prioridades.Designer.cs">
+      <DependentUpon>Prioridades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Proyectos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Proyectos.designer.cs">
+      <DependentUpon>Proyectos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Recursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Recursos.Designer.cs">
+      <DependentUpon>Recursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Unidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Unidades.Designer.cs">
+      <DependentUpon>Unidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIAuditoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIAuditoria.Designer.cs">
+      <DependentUpon>MDIAuditoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Actividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Actividades.Designer.cs">
+      <DependentUpon>Actividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\AsignacionGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\AsignacionGrupos.Designer.cs">
+      <DependentUpon>AsignacionGrupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\AyudaGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\AyudaGrupo.Designer.cs">
+      <DependentUpon>AyudaGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\AyudaInformeActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\AyudaInformeActividad.designer.cs">
+      <DependentUpon>AyudaInformeActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\AyudaInformeGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\AyudaInformeGrupo.designer.cs">
+      <DependentUpon>AyudaInformeGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\AyudaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\AyudaUsuario.Designer.cs">
+      <DependentUpon>AyudaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Informes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Informes.designer.cs">
+      <DependentUpon>Informes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Rubricas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Rubricas.Designer.cs">
+      <DependentUpon>Rubricas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AuditoriaControlador\AuditoriaControlador.csproj">
+      <Project>{71224e1a-a1ed-4869-bee3-b937b763f14f}</Project>
+      <Name>AuditoriaControlador</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mantenimientos\AyudaGrupos.resx">
+      <DependentUpon>AyudaGrupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Empresas.resx">
+      <DependentUpon>Empresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Estandares.resx">
+      <DependentUpon>Estandares.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Grupos.resx">
+      <DependentUpon>Grupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Medidas.resx">
+      <DependentUpon>Medidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Prioridades.resx">
+      <DependentUpon>Prioridades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Proyectos.resx">
+      <DependentUpon>Proyectos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Recursos.resx">
+      <DependentUpon>Recursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Unidades.resx">
+      <DependentUpon>Unidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIAuditoria.resx">
+      <DependentUpon>MDIAuditoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Actividades.resx">
+      <DependentUpon>Actividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\AsignacionGrupos.resx">
+      <DependentUpon>AsignacionGrupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\AyudaGrupo.resx">
+      <DependentUpon>AyudaGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\AyudaInformeActividad.resx">
+      <DependentUpon>AyudaInformeActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\AyudaInformeGrupo.resx">
+      <DependentUpon>AyudaInformeGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\AyudaUsuario.resx">
+      <DependentUpon>AyudaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Informes.resx">
+      <DependentUpon>Informes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Rubricas.resx">
+      <DependentUpon>Rubricas.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
